@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="backroom3.css">
+
+<title>The White Room</title>
+<style>
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 125px;
+        color: white;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+    }
+
+    .shape {
+        position: absolute;
+        background-color: white;
+        opacity: 1;
+    }
+
+    /* Define individual shapes */
+    .shape1 {
+        width: 50px;
+        height: 50px;
+        top: 20%;
+        left: 30%;
+    }
+
+    .shape2 {
+        width: 80px;
+        height: 30px;
+        top: 40%;
+        left: 70%;
+    }
+
+    .shape3 {
+        width: 10px;
+        height: 40px;
+        top: 40%;
+        left: 70%;
+    }
+
+    .shape4 {
+        width: 60px;
+        height: 80px;
+        top: 20%;
+        left: 70%;
+    }
+
+    .shape5 {
+        width: 25px;
+        height: 84px;
+        top: 80%;
+        left: 70%;
+    }
+
+</style>
+</head>
+<body>
+<div class="text">"The White Room"</div>
+
+<!-- Randomly position shapes --> 
+<script> /* This Part was made with the help of CHATGPT */
+    const numShapes = 15;
+    for (let i = 1; i <= numShapes; i++) {
+        const shape = document.createElement('div');
+        shape.className = 'shape shape' + i;
+        shape.style.top = Math.random() * 100 + '%';
+        shape.style.left = Math.random() * 100 + '%';
+        shape.style.width = Math.random() * 100 + 'px';
+        shape.style.height = Math.random() * 100 + 'px';
+        document.body.appendChild(shape);
+    }
+</script>
+
+<div class="grid-container">
+    <div class="grid-item"><img src="images/white room1.jpg" alt="White Room 1"></div>
+    <div class="grid-item"><img src="images/white room2.png" alt="White Room 2"></div>
+    <div class="grid-item">
+        <a href="backroom4.html">
+            <img src="images/white room3.png" alt="White Room 3">
+        </a>
+    </div>
+    <div class="grid-item"><img src="images/white room4.jpg" alt="White Room 4"></div>
+</div>
+<video autoplay loop muted class="background-video">
+    <source src="images/the white room.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+</body>
+</html>

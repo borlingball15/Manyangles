@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.square:hover {
+    transform: scale(2.2);
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.3s;
+    text-align: center;
+}
+
+.square:hover .text {
+    opacity: 1;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.article1,
+.article2,
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.video {
+    width: 100%;
+    border: 5px solid black;
+}
